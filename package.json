@@ -1,0 +1,19 @@
+{
+  "name": "vinted-infinite-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielAleksiuk/react-infinite-scroll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielAleksiuk/react-infinite-scroll/issues"
+  },
+  "homepage": "https://github.com/danielAleksiuk/react-infinite-scroll#readme"
+}
