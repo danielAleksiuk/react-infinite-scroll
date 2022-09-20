@@ -10,16 +10,8 @@
     "lint:ts": "eslint src --ext .ts,.tsx",
     "format": "prettier --write **/*.{ts,tsx,json}"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielAleksiuk/react-infinite-scroll.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danielAleksiuk/react-infinite-scroll/issues"
-  },
-  "homepage": "https://github.com/danielAleksiuk/react-infinite-scroll#readme",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/plugin-transform-runtime": "^7.18.10",
