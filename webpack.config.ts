@@ -1,34 +1,34 @@
-import path from 'path';
-import { Configuration as WebpackConfiguration } from 'webpack';
-import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
-import { DefinePlugin } from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import path from "path";
+import { Configuration as WebpackConfiguration } from "webpack";
+import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+import { DefinePlugin } from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
 }
 
 const webpackConfig = (): Configuration => ({
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
   ...(process.env.production || !process.env.development
     ? {}
-    : { devtool: 'eval-source-map' }),
+    : { devtool: "eval-source-map" }),
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
+    extensions: [".ts", ".tsx", ".js"],
+    plugins: [new TsconfigPathsPlugin({ configFile: "./tsconfig.json" })],
   },
   output: {
-    path: path.join(__dirname, '/build'),
-    filename: 'build.js',
+    path: path.join(__dirname, "/build"),
+    filename: "build.js",
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
         options: {
           transpileOnly: true,
         },
@@ -36,12 +36,12 @@ const webpackConfig = (): Configuration => ({
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        type: 'asset/resource'
-      }
+        type: "asset/resource",
+      },
     ],
   },
   devServer: {
@@ -51,13 +51,12 @@ const webpackConfig = (): Configuration => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: "./public/index.html",
     }),
     new DefinePlugin({
-      'process.env': process.env.production || !process.env.development,
+      "process.env": process.env.production || !process.env.development,
     }),
-    new ForkTsCheckerWebpackPlugin({
-    }),
+    new ForkTsCheckerWebpackPlugin({}),
   ],
 });
 

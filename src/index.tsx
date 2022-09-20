@@ -1,13 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import HomePage from "./pages/home-page/HomePage";
 
-const App = () => {
-  return <>
-    <h1>app works</h1>
-  </>;
-};
-
-ReactDOM
-	.createRoot(document.getElementById('root') as Element)
-	.render(<App />);
+ReactDOM.createRoot(document.getElementById("root") as Element).render(
+  <HomePage />
+);

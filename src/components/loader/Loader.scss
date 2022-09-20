@@ -1,0 +1,47 @@
+@keyframes moveDot {
+  0% {
+    left: 1%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 99%;
+    opacity: 0;
+  }
+}
+
+.loader-container {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  span:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+
+  span:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+
+  .dot {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4b6587;
+    position: absolute;
+    animation: moveDot 2s cubic-bezier(0.15, 0.56, 0.74, 0.35) infinite;
+  }
+}
