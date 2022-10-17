@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Image from "../Image";
-import React from "react";
-import "@testing-library/jest-dom";
+// import React from "react";
+// import "@testing-library/jest-dom";
 
 describe("Image", () => {
   const image = {

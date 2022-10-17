@@ -6,7 +6,7 @@ type useLoadImagesType = {
   loading: boolean;
   hasNextPage: boolean;
   images: Images;
-  loadMore: Function;
+  loadMore: () => void;
   error: string | null;
 };
 

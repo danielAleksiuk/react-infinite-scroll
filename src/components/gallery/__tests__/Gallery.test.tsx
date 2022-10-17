@@ -2,7 +2,7 @@ import Gallery from "../Gallery";
 import { render, screen } from "@testing-library/react";
 import useLoadImages from "../../../hooks/useLoadImages";
 import React from "react";
-import "@testing-library/jest-dom";
+// import "@testing-library/jest-dom";
 
 jest.mock("../../../hooks/useLoadImages");
 jest.mock("../../../hooks/useInfiniteScroll");

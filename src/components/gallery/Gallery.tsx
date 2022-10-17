@@ -8,7 +8,7 @@ import { Image as ImageType } from "../../types/images";
 import FlickerApiService from "../../api/flickerApiService";
 import "./Gallery.scss";
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   const { loading, hasNextPage, images, loadMore, error } =
     useLoadImages(FlickerApiService);
 

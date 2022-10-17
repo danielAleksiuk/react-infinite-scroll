@@ -4,11 +4,11 @@ import "./Image.scss";
 
 type ImageProps = {
   image: ImageType;
-  addFavorite: Function;
-  isFavorite: Function;
+  addFavorite: (id: string) => void;
+  isFavorite: (id: string) => boolean;
 };
 
-const Image: React.FC<ImageProps> = ({ image, addFavorite, isFavorite }) => {
+const Image = ({ image, addFavorite, isFavorite }: ImageProps) => {
   return (
     <div className="image-container">
       <picture>

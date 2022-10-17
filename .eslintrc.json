@@ -35,12 +35,6 @@
     "react": {
       "pragma": "React",
       "version": "detect"
-    },
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
+    }
   }
 }

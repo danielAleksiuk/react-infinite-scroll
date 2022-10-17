@@ -5,7 +5,7 @@ type useInfinite = {
   ref: RefObject<HTMLElement>;
   hasNextPage: boolean;
   loading: boolean;
-  loadMore: Function;
+  loadMore: () => void;
 };
 
 const useInfiniteScroll = ({
