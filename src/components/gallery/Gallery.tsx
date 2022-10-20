@@ -34,6 +34,8 @@ const Gallery = () => {
 
       {loading && <Loader />}
       <div ref={ref}> </div>
+
+{/* <Loader /> */}
     </>
   );
 };
